@@ -4,6 +4,10 @@
 
 [![Visit our IRC channel](https://kiwiirc.com/buttons/irc.freenode.net/bitcoinj.png)](https://kiwiirc.com/client/irc.freenode.net/bitcoinj)
 
+### 10secondsj
+
+10secondsj is a library modified to connect the bitcoinj library to a 10seconds network.
+
 ### Welcome to bitcoinj
 
 The bitcoinj library is a Java implementation of the Bitcoin protocol, which allows it to maintain a wallet and send/receive transactions without needing a local copy of Bitcoin Core. It comes with full documentation and some example apps showing how to use it.

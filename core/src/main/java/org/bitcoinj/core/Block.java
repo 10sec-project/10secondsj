@@ -67,16 +67,16 @@ public class Block extends Message {
      * upgrade everyone to change this, so Bitcoin can continue to grow. For now it exists as an anti-DoS measure to
      * avoid somebody creating a titanically huge but valid block and forcing everyone to download/store it forever.
      */
-    public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
+    public static final int MAX_BLOCK_SIZE = (int) (43.6 * 1000); // 43600
     /**
      * A "sigop" is a signature verification operation. Because they're expensive we also impose a separate limit on
      * the number in a block to prevent somebody mining a huge block that has way more sigops than normal, so is very
      * expensive/slow to verify.
      */
-    public static final int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE / 50;
+    public static final int MAX_BLOCK_SIGOPS = (int) (3.6 * 1000); // 3600
 
     /** Standard maximum value for difficultyTarget (nBits) (Bitcoin MainNet and TestNet) */
-    public static final long STANDARD_MAX_DIFFICULTY_TARGET = 0x1d00ffffL;
+    public static final long STANDARD_MAX_DIFFICULTY_TARGET = 0x1e01ffffL;
 
     /** A value for difficultyTarget (nBits) that allows (slightly less than) half of all possible hash solutions. Used in unit testing. */
     public static final long EASIEST_DIFFICULTY_TARGET = 0x207fFFFFL;
@@ -274,7 +274,7 @@ public class Block extends Message {
     //
     //   "The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"
     private static final byte[] genesisTxInputScriptBytes = Utils.HEX.decode
-                ("04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73");
+                ("04ffff001d01044c4f5468652054696d652031302f4a756e2f3230323420497373756520746865206469676974616c2063757272656e63793a20507265706172696e6720666f722061204e657720457870657269656e6365");
 
     private static final byte[] genesisTxScriptPubKeyBytes;
     static {

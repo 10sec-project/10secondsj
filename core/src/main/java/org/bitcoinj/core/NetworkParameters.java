@@ -100,8 +100,8 @@ public abstract class NetworkParameters {
     protected NetworkParameters() {
     }
 
-    public static final int TARGET_TIMESPAN = 14 * 24 * 60 * 60;  // 2 weeks per difficulty cycle, on average.
-    public static final int TARGET_SPACING = 10 * 60;  // 10 minutes per block.
+    public static final int TARGET_TIMESPAN = 3 * 60 * 60;  // 3 hours per difficulty cycle, on average.
+    public static final int TARGET_SPACING = 1 * 10;  // 10 seconds per block.
     public static final int INTERVAL = TARGET_TIMESPAN / TARGET_SPACING;
     
     /**
@@ -114,7 +114,7 @@ public abstract class NetworkParameters {
     /**
      * The maximum number of coins to be generated
      */
-    public static final long MAX_COINS = 21000000;
+    public static final long MAX_COINS = 20160000;
 
     /**
      * The maximum money to be generated

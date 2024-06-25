@@ -29,7 +29,7 @@ import static com.google.common.base.Preconditions.checkState;
 public class RegTestParams extends AbstractBitcoinNetParams {
     private static final long GENESIS_TIME = 1296688602;
     private static final long GENESIS_NONCE = 2;
-    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206");
+    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("2b1a2b662593088bc14515e18b6a038ddc04e011516fbd6f8fedb86f6628d4c2");
 
     public RegTestParams() {
         super();
@@ -43,13 +43,13 @@ public class RegTestParams extends AbstractBitcoinNetParams {
         interval = Integer.MAX_VALUE;
         subsidyDecreaseBlockCount = 150;
 
-        port = 18444;
-        packetMagic = 0xfabfb5daL;
+        port = 19582;
+        packetMagic = 0xfcc5b6deL;
         dumpedPrivateKeyHeader = 239;
         addressHeader = 111;
         p2shHeader = 196;
-        segwitAddressHrp = "bcrt";
-        spendableCoinbaseDepth = 100;
+        segwitAddressHrp = "rtsec";
+        spendableCoinbaseDepth = 180;
         bip32HeaderP2PKHpub = 0x043587cf; // The 4 byte header that serializes in base58 to "tpub".
         bip32HeaderP2PKHpriv = 0x04358394; // The 4 byte header that serializes in base58 to "tprv"
         bip32HeaderP2WPKHpub = 0x045f1cf6; // The 4 byte header that serializes in base58 to "vpub".

@@ -226,7 +226,7 @@ public class CheckpointManager {
         checkNotNull(store);
         checkArgument(!(store instanceof FullPrunedBlockStore), "You cannot use checkpointing with a full store.");
 
-        timeSecs -= 60 * 60 * 24 * 7; // one week in seconds
+        timeSecs -= 60 * 60 * 3;
 
         checkArgument(timeSecs > 0);
         log.info("Attempting to initialize a new block store with a checkpoint for time {} ({})", timeSecs,

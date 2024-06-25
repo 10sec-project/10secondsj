@@ -42,9 +42,9 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
     public static final int TESTNET_MAJORITY_WINDOW = 100;
     public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 75;
     public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 51;
-    private static final long GENESIS_TIME = 1296688602;
-    private static final long GENESIS_NONCE = 414098458;
-    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("000000000933ea01ad0ee984209779baaec3ced90fa3f408719526f8d77f4943");
+    private static final long GENESIS_TIME = 1718028000;
+    private static final long GENESIS_NONCE = 9428329;
+    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("0000017057ff59f028ab772f66d21ba5156ca43a7774f74604e35bfc474ba65e");
 
     public TestNet3Params() {
         super();
@@ -53,13 +53,13 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         targetTimespan = TARGET_TIMESPAN;
         maxTarget = Utils.decodeCompactBits(Block.STANDARD_MAX_DIFFICULTY_TARGET);
 
-        port = 18333;
-        packetMagic = 0x0b110907;
+        port = 19471;
+        packetMagic = 0x0d170a0b;
         dumpedPrivateKeyHeader = 239;
         addressHeader = 111;
         p2shHeader = 196;
-        segwitAddressHrp = "tb";
-        spendableCoinbaseDepth = 100;
+        segwitAddressHrp = "ttsec";
+        spendableCoinbaseDepth = 180;
         bip32HeaderP2PKHpub = 0x043587cf; // The 4 byte header that serializes in base58 to "tpub".
         bip32HeaderP2PKHpriv = 0x04358394; // The 4 byte header that serializes in base58 to "tprv"
         bip32HeaderP2WPKHpub = 0x045f1cf6; // The 4 byte header that serializes in base58 to "vpub".
@@ -70,10 +70,9 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         majorityWindow = TESTNET_MAJORITY_WINDOW;
 
         dnsSeeds = new String[] {
-                "testnet-seed.bitcoin.jonasschnelli.ch", // Jonas Schnelli
-                "seed.tbtc.petertodd.net",               // Peter Todd
-                "seed.testnet.bitcoin.sprovoost.nl",     // Sjors Provoost
-                "testnet-seed.bluematt.me",              // Matt Corallo
+                "tdns1.addblock-chain.com",
+                "tdns2.addblockpool.org",
+                "tdns3.addblocktools.org",
         };
         httpSeeds = new HttpDiscovery.Details[] {
         };
