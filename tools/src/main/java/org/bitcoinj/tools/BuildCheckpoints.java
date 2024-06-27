@@ -222,10 +222,10 @@ public class BuildCheckpoints implements Callable<Integer> {
         checkState(manager.numCheckpoints() == expectedSize);
 
         if (params.getId().equals(NetworkParameters.ID_MAINNET)) {
-            StoredBlock test = manager.getCheckpointBefore(1719313597);
-            checkState(test.getHeight() == 126360);
+            StoredBlock test = manager.getCheckpointBefore(1719487080);
+            checkState(test.getHeight() == 143640);
             checkState(test.getHeader().getHashAsString()
-                    .equals("0000009a0f53ab72fd2c6a729bc79cc36422de620fdff3c6a04658e538d6b41a"));
+                    .equals("000000b94e32511f2c20f5807f46e2e847f1f275391884d0155ef9ae7d063c72"));
         } else if (params.getId().equals(NetworkParameters.ID_TESTNET)) {
             StoredBlock test = manager.getCheckpointBefore(1718028000);
             checkState(test.getHeight() == 0);

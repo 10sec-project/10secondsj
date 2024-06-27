@@ -78,7 +78,7 @@ public class MainNetParams extends AbstractBitcoinNetParams {
         checkpoints.put(90720, Sha256Hash.wrap("00000012481985af3c8b0ff972efc06fa265bd432a4d1978b1607c849c0f3857"));
         checkpoints.put(100440, Sha256Hash.wrap("000000377f643c135c4c2f4c8430d139eefd55066c6b0d3ba43d6492f2850936"));
         checkpoints.put(110160, Sha256Hash.wrap("00000029ba5a1e1cb637506bb468a52c20d32150a508fbba5039fe5c627f15d5"));
-        checkpoints.put(126360, Sha256Hash.wrap("0000009a0f53ab72fd2c6a729bc79cc36422de620fdff3c6a04658e538d6b41a"));
+        checkpoints.put(143640, Sha256Hash.wrap("000000b94e32511f2c20f5807f46e2e847f1f275391884d0155ef9ae7d063c72"));
 
         dnsSeeds = new String[] {
                 "dns1.10seconds.info",
