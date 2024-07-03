@@ -28,8 +28,8 @@ import static com.google.common.base.Preconditions.checkState;
  */
 public class RegTestParams extends AbstractBitcoinNetParams {
     private static final long GENESIS_TIME = 1296688602;
-    private static final long GENESIS_NONCE = 2;
-    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("2b1a2b662593088bc14515e18b6a038ddc04e011516fbd6f8fedb86f6628d4c2");
+    private static final long GENESIS_NONCE = 1;
+    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("55724e8d29cf636e3445c3cd457320a6ea5c13b5df960fc47b5504bc6081acf6");
 
     public RegTestParams() {
         super();
@@ -44,7 +44,7 @@ public class RegTestParams extends AbstractBitcoinNetParams {
         subsidyDecreaseBlockCount = 150;
 
         port = 19582;
-        packetMagic = 0xfcc5b6deL;
+        packetMagic = 0xfec7b8e0L;
         dumpedPrivateKeyHeader = 239;
         addressHeader = 111;
         p2shHeader = 196;

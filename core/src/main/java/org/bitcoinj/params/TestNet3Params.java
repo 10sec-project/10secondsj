@@ -42,9 +42,9 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
     public static final int TESTNET_MAJORITY_WINDOW = 100;
     public static final int TESTNET_MAJORITY_REJECT_BLOCK_OUTDATED = 75;
     public static final int TESTNET_MAJORITY_ENFORCE_BLOCK_UPGRADE = 51;
-    private static final long GENESIS_TIME = 1718028000;
-    private static final long GENESIS_NONCE = 9428329;
-    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("0000017057ff59f028ab772f66d21ba5156ca43a7774f74604e35bfc474ba65e");
+    private static final long GENESIS_TIME = 1720871100;
+    private static final long GENESIS_NONCE = 5653520;
+    private static final Sha256Hash GENESIS_HASH = Sha256Hash.wrap("000000d7a67ceebb2e9f5e35e6ee21d9ad5c8bf7c69c6b2d5b344b8a8cfe1f2b");
 
     public TestNet3Params() {
         super();
@@ -54,7 +54,7 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         maxTarget = Utils.decodeCompactBits(Block.STANDARD_MAX_DIFFICULTY_TARGET);
 
         port = 19471;
-        packetMagic = 0x0d170a0b;
+        packetMagic = 0x0f190c0d;
         dumpedPrivateKeyHeader = 239;
         addressHeader = 111;
         p2shHeader = 196;
@@ -70,9 +70,9 @@ public class TestNet3Params extends AbstractBitcoinNetParams {
         majorityWindow = TESTNET_MAJORITY_WINDOW;
 
         dnsSeeds = new String[] {
-                "tdns1.addblock-chain.com",
-                "tdns2.addblockpool.org",
-                "tdns3.addblocktools.org",
+                "tdns1.10seconds.info",
+                "tdns2.10seconds-seed.info",
+                "tdns3.10seconds-node.info",
         };
         httpSeeds = new HttpDiscovery.Details[] {
         };

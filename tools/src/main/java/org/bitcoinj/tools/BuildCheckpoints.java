@@ -222,15 +222,15 @@ public class BuildCheckpoints implements Callable<Integer> {
         checkState(manager.numCheckpoints() == expectedSize);
 
         if (params.getId().equals(NetworkParameters.ID_MAINNET)) {
-            StoredBlock test = manager.getCheckpointBefore(1719487080);
-            checkState(test.getHeight() == 143640);
-            checkState(test.getHeader().getHashAsString()
-                    .equals("000000b94e32511f2c20f5807f46e2e847f1f275391884d0155ef9ae7d063c72"));
-        } else if (params.getId().equals(NetworkParameters.ID_TESTNET)) {
-            StoredBlock test = manager.getCheckpointBefore(1718028000);
+            StoredBlock test = manager.getCheckpointBefore(1720842645);
             checkState(test.getHeight() == 0);
             checkState(test.getHeader().getHashAsString()
-                    .equals("0000017057ff59f028ab772f66d21ba5156ca43a7774f74604e35bfc474ba65e"));
+                    .equals("00000181816d9769a0279716ec893f4aa6d5a60c49efd7c85c7480d729846abe"));
+        } else if (params.getId().equals(NetworkParameters.ID_TESTNET)) {
+            StoredBlock test = manager.getCheckpointBefore(1720871100);
+            checkState(test.getHeight() == 0);
+            checkState(test.getHeader().getHashAsString()
+                    .equals("000000d7a67ceebb2e9f5e35e6ee21d9ad5c8bf7c69c6b2d5b344b8a8cfe1f2b"));
         }
     }
 
